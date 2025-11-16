@@ -27,7 +27,6 @@ import com.feed.thechick.ui.main.settings.SettingsViewModel
 @Composable
 fun SettingsOverlay(
     onClose: () -> Unit,
-    onPrivacy: () -> Unit = {},
     viewModel: SettingsViewModel = hiltViewModel()
 ) {
     // ----------------------- Colors -----------------------
@@ -101,14 +100,6 @@ fun SettingsOverlay(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 8.dp)
-                )
-
-                Spacer(Modifier.height(30.dp))
-
-                OrangePrimaryButton(
-                    text = "Privacy",
-                    onClick = onPrivacy,
-                    modifier = Modifier.fillMaxWidth(0.85f)
                 )
             }
         }

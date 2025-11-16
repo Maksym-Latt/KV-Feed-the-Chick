@@ -18,7 +18,6 @@ import com.feed.thechick.audio.rememberAudioController
 import com.feed.thechick.ui.main.gamescreen.GameScreen
 import com.feed.thechick.ui.main.menuscreen.MainViewModel
 import com.feed.thechick.ui.main.menuscreen.MenuScreen
-import com.feed.thechick.ui.main.menuscreen.PrivacyOverlay
 import com.feed.thechick.ui.main.menuscreen.SettingsOverlay
 
 @Composable
@@ -63,16 +62,9 @@ fun AppRoot(
                         if (showMenuSettings) {
                             SettingsOverlay(
                                 onClose = { showMenuSettings = false },
-                                onPrivacy = {
-                                    showMenuSettings = false
-                                    showMenuPrivacy = true
-                                }
                             )
                         }
 
-                        if (showMenuPrivacy) {
-                            PrivacyOverlay(onClose = { showMenuPrivacy = false })
-                        }
                     }
 
                 MainViewModel.Screen.Game ->
